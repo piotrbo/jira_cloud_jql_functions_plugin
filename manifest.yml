@@ -1,0 +1,20 @@
+modules:
+  jira:jqlFunction:
+    - key: jql-function-weeklyVersion
+      name: weeklyVersion
+      arguments:
+        - name: prefix
+          required: true
+      types:
+        - issue
+      operators:
+        - in
+        - =
+      function: weeklyVersion
+
+  function:
+    - key: weeklyVersion
+      handler: index.weeklyVersion
+
+app:
+  id: ari:cloud:ecosystem::app/0e7bf702-e692-4f99-a9ff-3be7d31c8221
